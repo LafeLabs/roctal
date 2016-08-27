@@ -28,7 +28,7 @@ color eightsColor = color(0,0,0);
 color sixtyfoursColor = color(0,0,0);
 
 void setup(){
-  size(900,100);
+  size(900,200);
 }
 
 void draw(){
@@ -53,19 +53,17 @@ void draw(){
     println();
     fill(sixtyfoursColor);
     stroke(sixtyfoursColor);
-    rect(3*side*index,0,side,side);
+    rect(3*side*index,0,side,3*side);
     fill(eightsColor);
     stroke(eightsColor);
-    rect(3*side*index + side,0,side,side);
+    rect(3*side*index + side,0,side,2*side);
     fill(onesColor);
     stroke(onesColor);
     rect(3*side*index + 2*side,0,side,side);
     stroke(0);
-    fill(0);
-    rect(3*side*index + 3*side,side,side/10,side);
-    text(currentChar,float(3*side*index) + 1.5*float(side),float(2*side));
+    text(currentChar,float(3*side*index) + 1.5*float(side),float(3*side));
   }
-  text("\\m/ Roctal encoding = ASCII -> octal -> resistor color code \\m/",side,3*side);
+  text("\\m/ Roctal encoding = ASCII -> octal -> resistor color code \\m/",side,5*side);
   noLoop();
 }
 

@@ -42,6 +42,7 @@ That's it.  The map from a sequence of colored objects to ASCII and back as defi
 
 The most basic application of this I want to create first is a self replicating physical object that has code imprinted in it to duplicate itself using a human/computer/machine combination.  Code that makes code.  At first with computers but later with other machines.  So this standard is at the core of the plan to build self replicating physical objects. 
 
+Also, print with trash, slice up magazines, sort colors, deposit data in trash glued to a surface.  This can be trash of any kind.
 
 
 

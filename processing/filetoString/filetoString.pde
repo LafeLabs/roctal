@@ -57,10 +57,10 @@ void draw(){
   
       fill(sixtyfoursColor);
       stroke(sixtyfoursColor);
-      rect(3*side*index,yPosition + 0,side,side);
+      rect(3*side*index,yPosition + 0,side,3*side);
       fill(eightsColor);
       stroke(eightsColor);
-      rect(3*side*index + side,yPosition + 0,side,side);
+      rect(3*side*index + side,yPosition + 0,side,2*side);
       fill(onesColor);
       stroke(onesColor);
       rect(3*side*index + 2*side,yPosition + 0,side,side);
@@ -70,7 +70,7 @@ void draw(){
    //   text(currentChar,yPosition + float(3*side*index) + 1.5*float(side),float(2*side));
     }
   noLoop();
-  yPosition += 3*side;
+  yPosition += 5*side;
   }
 }
 
