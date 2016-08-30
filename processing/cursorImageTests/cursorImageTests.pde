@@ -17,6 +17,10 @@ int[] greenC = {50,115,67};
 int[] blueC = {30,78,130};
 int[] violetC = {66,40,100};
 
+  int cursorRed = 0;
+  int cursorGreen = 0;
+  int cursorBlue = 0;
+
 
 float[] digitDistanceArray = {0,0,0,0,0,0,0,0};//how far are we from each color?
 
@@ -26,16 +30,13 @@ void setup(){
 void draw(){
   background(255);
   PImage myImage = loadImage("GIGO1.png");
-  image(myImage, 0, 0,521,298);
+  image(myImage, 0, 0,width,height);
   noFill();
   rect(mouseX,mouseY,20,20);
 
   
   PImage cursor = get(mouseX,mouseY,20,20);
 
-  int cursorRed = 0;
-  int cursorGreen = 0;
-  int cursorBlue = 0;
   for(int index = 0;index < cursor.width*cursor.height;index ++){
     cursorRed += red(cursor.pixels[index]);
     cursorGreen += green(cursor.pixels[index]);
@@ -65,7 +66,10 @@ void draw(){
   
   for(int index =0;index < 8;index++){
     if(digitDistanceArray[index] == min(digitDistanceArray)){
-      println(index);
+      print("color = ");
+      print(index);
+      print(",  d = ");
+      println(min(digitDistanceArray));
       digitValue = index;
     }  
   }
@@ -92,4 +96,48 @@ void draw(){
   }*/
 
   image(cursor, 0, 0,50,50);
+}
+
+void keyPressed(){
+  if(key == '0'){
+    blackC[0] = cursorRed;
+    blackC[1] = cursorGreen;
+    blackC[2] = cursorBlue;
+  }
+  if(key == '1'){
+    brownC[0] = cursorRed;
+    brownC[1] = cursorGreen;
+    brownC[2] = cursorBlue;
+  }
+  if(key == '2'){
+    redC[0] = cursorRed;
+    redC[1] = cursorGreen;
+    redC[2] = cursorBlue;
+  }
+    if(key == '3'){
+    orangeC[0] = cursorRed;
+    orangeC[1] = cursorGreen;
+    orangeC[2] = cursorBlue;
+  }
+  if(key == '4'){
+    yellowC[0] = cursorRed;
+    yellowC[1] = cursorGreen;
+    yellowC[2] = cursorBlue;
+  }
+    if(key == '5'){
+    greenC[0] = cursorRed;
+    greenC[1] = cursorGreen;
+    greenC[2] = cursorBlue;
+  }
+    if(key == '6'){
+    blueC[0] = cursorRed;
+    blueC[1] = cursorGreen;
+    blueC[2] = cursorBlue;
+  }
+    if(key == '7'){
+    violetC[0] = cursorRed;
+    violetC[1] = cursorGreen;
+    violetC[2] = cursorBlue;
+  }
+
 }
