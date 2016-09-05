@@ -25,17 +25,17 @@ int[] violetC = {66,40,100};
 float[] digitDistanceArray = {0,0,0,0,0,0,0,0};//how far are we from each color?
 
 void setup(){
-  size(521,298);
+  size(398,169);
 }
 void draw(){
   background(255);
-  PImage myImage = loadImage("GIGO1.png");
+  PImage myImage = loadImage("moretext.png");
   image(myImage, 0, 0,width,height);
   noFill();
-  rect(mouseX,mouseY,20,20);
+  rect(mouseX,mouseY,10,10);
 
   
-  PImage cursor = get(mouseX,mouseY,20,20);
+  PImage cursor = get(mouseX,mouseY,10,10);
 
   for(int index = 0;index < cursor.width*cursor.height;index ++){
     cursorRed += red(cursor.pixels[index]);

@@ -18,7 +18,7 @@ float y = height/2;
 int row = 0;
 int column = 0;
 
-float side = 15;
+float side = 35;
 float h = sqrt(3)*side/2;
 float trianglePoints[] = new float[6];
 float r = h/3;
