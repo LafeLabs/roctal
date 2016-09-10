@@ -1,4 +1,4 @@
-float side = 3;
+float side = 20;
 int ones, eights, sixtyfours;
 float x = side;
 float y = 2*side;
@@ -11,13 +11,14 @@ float[] currentColor = {255,255,255};
 int globalIndex = 0;
 
 void setup(){
- size(500,1500); 
+ size(1000,1000); 
  background(255);
 }
 
 
 void draw(){
-  String myFile[] = loadStrings("squareFileWrite.pde");//this file
+//  String myFile[] = loadStrings("squareFileWrite.pde");//this file
+ String myFile[] = loadStrings("message.txt");//
   String myString = myFile[globalIndex]; 
   textSize(8);
  // myString = "void draw(){";
