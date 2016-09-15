@@ -1,4 +1,4 @@
-float side = 5;
+float side = 25;
 int ones, eights, sixtyfours;
 float x = side;
 float y = 2*side;
@@ -11,7 +11,7 @@ String myString = "1. FIND A DRY BOX MADE OF THICK CARDBOARD\n";
 
 
 void setup(){
- size(500,500); 
+ size(800,800); 
 }
 
 
