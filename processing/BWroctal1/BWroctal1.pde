@@ -13,7 +13,7 @@ float side = 28;
 float x,y;
 
 void setup(){
-  size(621,518);
+  size(500,600);
   rectMode(CENTER);
   noFill();
   stroke(0);
@@ -22,7 +22,7 @@ void setup(){
 
 void draw(){
   background(255);  
-  PImage myImage = loadImage("BWroctal1zoom.png");
+  PImage myImage = loadImage("toomanysecrets.jpg");
   image(myImage, 0, 0,width,height);
   x = mouseX;
   y = mouseY;
