@@ -1,21 +1,24 @@
 float x,y;
-int side = 25;
+int side = 5;
 char myChar = 'A';
 int n = int(myChar);
 int thisBit = 0;
 
 void setup(){
- size(500,500); 
+ size(200,1000); 
  rectMode(CENTER);
 }
 
 void draw(){
   background(255);
-  drawCursor();
-  writeChar(int('A'),4*side,4*side);
-  writeChar(int('B'),8*side,4*side);
-  writeChar(int('C'),12*side,4*side);
+  for(int letterIndex = 0;letterIndex < 26;letterIndex++){
+    writeChar(int('A') +letterIndex,10*side,10*side + 4*side*letterIndex);
+  }
+  for(int letterIndex = 0;letterIndex < 26;letterIndex++){
+    writeChar(int(random(127)),20*side,10*side + 4*side*letterIndex);
+  }
 
+  //println(int(random(127)));
 }
 
 
