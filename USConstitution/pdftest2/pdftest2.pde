@@ -5,6 +5,8 @@ int side = 12;
 int bitIndex = 0;
 int X,Y;
 int numberofColumns = 16;
+int ones, eights, sixtyfours;
+
 
 void setup() {
   size(1000, 2000, PDF, "rect2.pdf");
@@ -24,8 +26,16 @@ void draw() {
 }
 
 void charWrite(int localX, int localY,int localInt){
+  ones = localInt&7;
+  eights = (localInt>>3)&7;
+  sixtyfours = (localInt>>6)&7;
   rect(localX, localY,side,side);
-  text(char(localInt),localX+side,localY);
+  textSize(16);
+  text(char(localInt),localX+side,localY+side);
+  text(char(48 + sixtyfours),localX,localY + 2*side); 
+  text(char(48 + eights),localX,localY + 3*side); 
+  text(char(48 + ones),localX,localY + 4*side); 
+
   rect(localX, localY - 2*side,4*side,side);
   bitIndex = 8;
   for(int indexY = 1;indexY < 4;indexY++){
