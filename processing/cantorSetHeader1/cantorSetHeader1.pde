@@ -9,6 +9,11 @@ int ones, eights, sixtyfours;
 int columnIndex;
 int currentTextSize = 64;
 
+/*
+
+
+*/
+
 void setup() {
   size(1000, 2000, PDF, "cantorHeader.pdf");
   background(255);
@@ -53,14 +58,6 @@ void draw() {
    int ASCIIint = 65 + columnIndex%26;
    charWrite(4*side*columnIndex,370*side,ASCIIint);
  }
- currentTextSize /= 2;
- numberofColumns = 128;
- side = width/(numberofColumns*4);
- for(columnIndex = 0;columnIndex < numberofColumns;columnIndex++){
-   int ASCIIint = 65 + columnIndex%26;
-   charWrite(4*side*columnIndex,1150*side,ASCIIint);
- }
-
 
   // Exit the program 
   println("Finished.");
@@ -76,11 +73,11 @@ void charWrite(int localX, int localY,int localInt){
   rect(localX, localY,side,side);
   textSize(currentTextSize);
   text(char(localInt),localX+side,localY+side);
-  text(char(48 + sixtyfours),localX,localY + 2*side); 
-  text(char(48 + eights),localX,localY + 3*side); 
-  text(char(48 + ones),localX,localY + 4*side); 
-
+  text(char(48 + sixtyfours),localX + (side/4),localY + 2*side); 
+  text(char(48 + eights),localX + (side/4),localY + 3*side); 
+  text(char(48 + ones),localX + (side/4),localY + 4*side); 
   rect(localX, localY - 2*side,4*side,side);
+  rect(localX + 4*side,localY - 2*side,side/6,6*side);
   bitIndex = 8;
   for(int indexY = 1;indexY < 4;indexY++){
     for(int indexX = 1;indexX < 4;indexX++){
