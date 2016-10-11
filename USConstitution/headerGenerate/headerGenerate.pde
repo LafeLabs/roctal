@@ -25,14 +25,14 @@ void draw() {
  numberofColumns = 64;
  
  String lines[] = loadStrings("USC.txt");//copy this code into this text file
- inputString = join(lines, ' ');
+ inputString = join(lines, "");
  for(rowIndex = 0;rowIndex < 64;rowIndex++){
    for(columnIndex = 0;columnIndex < numberofColumns;columnIndex++){
      int ASCIIint = int('a');
      ASCIIint = int(inputString.charAt(globalIndex));
      charWrite(4*side*columnIndex,rowIndex*4*side,ASCIIint);
      globalIndex++;
-     if(globalIndex >= inputString.length()){
+     if(globalIndex >= 64*64){
         println("Finished.");
         exit(); 
      }
